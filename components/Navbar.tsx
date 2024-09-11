@@ -1,3 +1,4 @@
+import { NavLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,7 +9,13 @@ const Navbar = () => {
         <Link href='/'>
           <Image src='/logo.svg' width={115} height={43} alt='Tale Nest' />
         </Link>
-        <ul className='xl:flex hidden text-sm gap-7'></ul>
+        <ul className='xl:flex hidden text-sm gap-7'>
+          {NavLinks.map((link) => (
+            <Link href={link.href} key={link.key}>
+              {link.text}
+            </Link>
+          ))}
+        </ul>
       </div>
     </nav>
   );
