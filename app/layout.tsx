@@ -1,3 +1,5 @@
+import './globals.css';
+
 export const metadata = {
   title: 'Tale Nest',
   description:
@@ -11,7 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        Navbar
+        <main>{children}</main>
+        Footer
+      </body>
     </html>
   );
 }
